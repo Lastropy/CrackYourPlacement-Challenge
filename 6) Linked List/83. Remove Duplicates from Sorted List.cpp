@@ -16,7 +16,7 @@ public:
     ListNode* deleteDuplicates(ListNode* head) {
         if(head == NULL || head -> next == NULL)
             return head;
-        ListNode* start = head;
+        auto start = head;
         while(start){
             while(start -> next && start -> val == start -> next -> val){
                 start -> next = start -> next -> next;
