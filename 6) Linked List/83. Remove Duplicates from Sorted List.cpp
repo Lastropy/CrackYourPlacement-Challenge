@@ -19,11 +19,12 @@ public:
         auto start = head;
         while(start){
             while(start -> next && start -> val == start -> next -> val){
+                auto duplicate = start -> next;
                 start -> next = start -> next -> next;
+                delete duplicate;
             }
             start = start -> next;
         }
-        delete start;
         return head;
     }
 };
