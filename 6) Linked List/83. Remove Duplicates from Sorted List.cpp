@@ -11,23 +11,19 @@
 class Solution {
 public:
     // https://leetcode.com/problems/remove-duplicates-from-sorted-list/submissions/
-    // 2 pointers -> skip till duplicates found
-    // once out of loop -> start.next = NULL as start is the last non-duplicate Node.
+    // 1 pointers -> skip till duplicates found
+    // free memory at end
     ListNode* deleteDuplicates(ListNode* head) {
         if(head == NULL || head -> next == NULL)
             return head;
         ListNode* start = head;
-        ListNode* move = head -> next;
-        while(move){
-            if(start -> val == move -> val){
-                move = move -> next;
-                continue;
+        while(start){
+            while(start -> next && start -> val == start -> next -> val){
+                start -> next = start -> next -> next;
             }
-            start -> next = move;
-            start = move;
-            move = move -> next;
+            start = start -> next;
         }
-        start -> next = NULL;
+        delete start;
         return head;
     }
 };
