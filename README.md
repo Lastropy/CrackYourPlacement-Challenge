@@ -1,4 +1,4 @@
-<a href="https://www.linkedin.com/posts/lastropy_crackyourplacement-challengeaccepted-motivation-activity-6927224036364021760-X3ul?utm_source=linkedin_share&utm_medium=member_desktop_web">
+<a href="https://www.linkedin.com/in/lastropy/">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 
