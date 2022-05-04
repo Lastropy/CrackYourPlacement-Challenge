@@ -17,13 +17,14 @@ public:
         if(head == NULL || head -> next == NULL)
             return head;
         auto start = head;
-        while(start){
-            while(start -> next && start -> val == start -> next -> val){
+        while(start -> next){
+            if(start -> val == start -> next -> val){
                 auto duplicate = start -> next;
                 start -> next = start -> next -> next;
                 delete duplicate;
             }
-            start = start -> next;
+            else
+                start = start -> next;
         }
         return head;
     }
